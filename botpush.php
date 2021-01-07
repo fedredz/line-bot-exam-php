@@ -18,9 +18,6 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($test)
 
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-
-$bot = new BOT_API($channelSecret, $access_token);
 $msg = "สวัสดี";
 $image_url="https://sv1.picz.in.th/images/2021/01/07/l3G5ek.jpg"
 $messageBuilder = new TextMessageBuilder($msg);
@@ -31,6 +28,10 @@ $multiMessageBuilder = new MultiMessageBuilder();
                                  ->add($imageBuilder);
 
 $bot->replyMessage($bot->replyToken, $multiMessageBuilder);
+
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+
+
 
 
 
