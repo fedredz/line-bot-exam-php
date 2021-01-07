@@ -18,17 +18,6 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($test)
 
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
-$msg = "สวัสดี";
-$image_url="https://sv1.picz.in.th/images/2021/01/07/l3G5ek.jpg"
-$messageBuilder = new TextMessageBuilder($msg);
-$imageBuilder = new ImageMessageBuilder($image_url, $image_url);
-
-$multiMessageBuilder = new MultiMessageBuilder();
-            $multiMessageBuilder->add($messageBuilder)
-                                 ->add($imageBuilder);
-
-$bot->replyMessage($bot->replyToken, $multiMessageBuilder);
-
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 
