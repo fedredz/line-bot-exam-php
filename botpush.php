@@ -18,7 +18,7 @@ $originalimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.jpg";
 $previewimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.th.jpg";
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($msg);
 $imageBuilder = new \LINE\LINEBot\MessageBuilder\ImageMessageBuilder($originalimage_url, $previewimage_url);
-$multiMessageBuilder = new \LINE\LINEBot\MultiMessageBuilder();
+$multiMessageBuilder = new \LINE\LINEBot\MessageBuilder\MultiMessageBuilder();
             $multiMessageBuilder->add($textMessageBuilder);
                                  ->add($imageBuilder);
 
