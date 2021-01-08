@@ -14,11 +14,11 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $msg = "ภาษาไทย";
-$image_url="https://sv1.picz.in.th/images/2021/01/07/l3G5ek.jpg";
+$image_url= "https://sv1.picz.in.th/images/2021/01/07/l3G5ek.jpg";
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($msg);
 $imageBuilder = new \LINE\LINEBot\ImageMessageBuilder($image_url, $image_url);
 $multiMessageBuilder = new \LINE\LINEBot\MultiMessageBuilder();
-            $multiMessageBuilder->add($TextMessageBuilder);
+            $multiMessageBuilder->add($textMessageBuilder);
                                  ->add($imageBuilder);
 
 $response = $bot->pushMessage($pushID, $multiMessageBuilder);
