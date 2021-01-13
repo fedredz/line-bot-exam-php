@@ -14,8 +14,10 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $msg = "สวัสดีจ้า";
-$originalimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.jpg";
-$previewimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.th.jpg";
+//$originalimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.jpg";
+//$previewimage_url= "https://sv1.picz.in.th/images/2021/01/08/lTo3oa.th.jpg";
+$originalimage_url="http://10.0.1.191/static/upload/event/2021-01-13/v2_c670a674c019c3a4c4cf3e6e752434353828561a.jpg";
+$previewimage_url=$originalimage_url;
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($msg);
 $imageBuilder = new \LINE\LINEBot\MessageBuilder\ImageMessageBuilder($originalimage_url, $previewimage_url);
 $multiMessageBuilder = new \LINE\LINEBot\MessageBuilder\MultiMessageBuilder();
